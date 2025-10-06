@@ -39,3 +39,31 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Docker
+*.local
+docker-compose.override.yml
+.dockerignore
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Helm
+charts/**/values.dev.yaml
+charts/**/values.local.yaml
+charts/**/tmp/
+helm-debug.log
+
+# Deploy helpers
+deploy/values.dev.yaml
+deploy/tmp/
+deploy/*.log

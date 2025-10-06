@@ -1,0 +1,24 @@
+image:
+  repository: ghcr.io/oelnajmi/devops-practice
+  tag: main
+  pullPolicy: Always
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  port: 3000
+
+containerPort: 3000
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+# Set to true only if your GHCR image is private and you add a pull secret
+imagePullSecrets: []
+# - name: ghcr-pull
